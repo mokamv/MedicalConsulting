@@ -1,0 +1,14 @@
+{
+    "parameters": {
+        "welcome_message": {
+            "defaultValue": {
+                "value": "Welcome to my app!"
+            }
+        },
+        "welcome_message_caps": {
+            "defaultValue": {
+                "value": "WELCOME TO MY APP!"
+            }
+        }
+    }
+}

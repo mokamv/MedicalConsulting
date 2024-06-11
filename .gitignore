@@ -1,2 +1,11 @@
 node_modules/
 .DS_Store
+
+# Ignore Firebase configuration files
+firebase.json
+.firebaserc
+firebase-debug.log
+firestore.rules
+firestore.indexes.json
+storage.rules
+```

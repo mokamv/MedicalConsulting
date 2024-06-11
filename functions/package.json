@@ -1,0 +1,25 @@
+{
+  "name": "functions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "build": "echo 'No build step defined'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "eslint-config-google": "^0.14.0",
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0"
+  },
+  "engines": {
+    "node": "16"
+  }
+}
