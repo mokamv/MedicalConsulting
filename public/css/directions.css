@@ -21,6 +21,10 @@ body {
     .nav-links {
         display: none;
     }
+    img{
+        width: 400px;
+        height: auto;
+    }
 }
 
 @media screen and not (max-width: 740px) {
