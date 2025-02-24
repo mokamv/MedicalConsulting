@@ -1,15 +1,35 @@
 html, body {
     margin: 0;
     padding: 0;
-    min-height: 100vh;
+    height: 100%;
 }
-
+  
 body {
     background-color: #f7f7f7;
-    display: flex;
-    flex-direction: column;
+}
+  
+.content {
+    display: grid;
+    width: 55%;
+    margin: auto;
+    margin-top: 50px;
 }
 
+
+  
+  
+@media screen and (max-width: 740px) {
+        .nav-links {
+        display: none;
+        }
+}
+  
+@media screen and not (max-width: 740px) {
+    .dropdown {
+        display: none;
+    }
+}
+  
 .topnav {
     display: flex;
     justify-content: space-between;
@@ -19,19 +39,7 @@ body {
     height: 140px;
     padding-right: 50px;
 }
-
-@media screen and (max-width: 740px) {
-    .nav-links {
-        display: none;
-    }
-}
-
-@media screen and not (max-width: 740px) {
-    .dropdown {
-        display: none;
-    }
-}
-
+  
 .topnav a {
     color: #3c3c3c;
     text-align: center;
@@ -42,38 +50,35 @@ body {
     font-weight: 300;
     margin: 20px;
 }
-
+  
 .nav-links {
     margin-left: auto;
 }
-
-
-/* Change the color of links on hover */
+  
 .topnav a:hover {
     background-color: #ddd;
     color: black;
 }
-
-/* Add a color to the active/current link */
+  
 .topnav a.active {
     /* background: linear-gradient(to right, rgb(103, 143, 105), #375940); */
     background-color: rgb(76,113,112);
     color: white;
     border-radius: 10px;
 }
-
+  
 .logo {
-    width: 120px; /* Adjust this value as needed */
-    height:120px; /* Adjust this value as needed */
+    width: 120px; 
+    height:120px;
     border-radius: 50%;
     margin-top: 5px;
     margin-left: 50px;
-    transform: scale(1); /* Increase the size of the image */
+    transform: scale(1);
     object-fit: cover;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-
+  
 .dropdown button {
     width: 100px;
     color: #3c3c3c;
@@ -84,12 +89,13 @@ body {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 300;
     margin: 20px;
+    margin-right: 40px;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     border-radius: 5px;
     border-color: rgb(208, 208, 208);
 }
-
+  
 .dropdown-content {
     display: none;
     justify-content: right;
@@ -99,8 +105,7 @@ body {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
-
-/* Links inside the dropdown */
+  
 .dropdown-content a {
     float: none;
     color: black;
@@ -110,61 +115,40 @@ body {
     text-align: left;
 }
 
-/* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
     background-color: #ddd;
 }
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
-  
-.content {
-    flex: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 0 2rem;
+
+.left {
+    padding: 0px;
 }
-  
-.left, .right {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+.right {
+    margin:0;
+    padding: 0;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
 }
-  
-.right img {
-    width: 750px;
+
+.right-img {
+    width: 100%;
     height: auto;
     object-fit: cover;
     margin-right: 0px;
 }
 
-.uk-text {
-    line-height: 1.6;
-    margin-bottom: 1rem;
-}
-
-iframe {
-    width: 100%;
-    border-radius: 8px;
-    margin-top: 1rem;
-}
-
 @media screen and (max-width: 740px) {
-    .content {
-        grid-template-columns: 1fr;
-        padding: 1rem;
-    }
-    
-    .left, .right {
-        margin: 1rem 0;
+.content {
+        margin: auto;
+        width: 80%;
     }
 }
+
 
 .uk-text {
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -173,3 +157,54 @@ iframe {
     font-size: 40px, 40px, 20px;
 }
 
+.uk-text h3 {
+    font-size: 10px;
+}
+
+.find-us {
+    top: 30%;
+    left: 70px;
+}
+
+.find-us button {
+    background-color: rgb(76,113,112);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.description {
+    margin-top: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+footer {
+    background-color: rgb(76,113,112); /* Added footer styles */
+    color: white;
+    text-align: left;
+    padding: 5px;
+    padding-left: 30px;
+    width: auto;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 20px;
+    position: relative;
+}
+
+h3.small-text {
+    font-size: 25px; /* Use the correct desired size */
+}
+
+.small-text {
+    font-size: 20px;
+}

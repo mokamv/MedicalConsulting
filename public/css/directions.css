@@ -1,10 +1,13 @@
 html, body {
     margin: 0;
     padding: 0;
+    min-height: 100vh;  /* Ensure minimum height is full viewport */
 }
 
 body {
     background-color: #f7f7f7;
+    display: flex;      /* Use flexbox for layout */
+    flex-direction: column;  /* Stack children vertically */
 }
 
 .topnav {
@@ -22,8 +25,11 @@ body {
         display: none;
     }
     img{
-        width: 400px;
+        width: 350px;
         height: auto;
+    }
+    .right {
+        max-width: 350px;
     }
 }
 
@@ -171,5 +177,53 @@ body {
     font-weight: 300;
     color: #2d2e33;
     font-size: 40px, 40px, 20px;
+}
+
+.direction-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.direction-button {
+    background-color: rgb(76,113,112);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.direction-button:hover {
+    background-color: rgb(66,98,97);
+    transform: translateY(-2px);
+}
+
+.section {
+    padding: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.section img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+.section h2 {
+    color: rgb(76,113,112);
+    margin-bottom: 1rem;
+}
+
+.smooth-scroll {
+    scroll-behavior: smooth;
 }
 

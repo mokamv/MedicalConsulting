@@ -10,12 +10,14 @@ body {
 
 .content {
   display: grid;
-  grid-template-columns: 2fr 1fr; /* Two columns: left (2 parts), right (1 part) */
+  grid-template-columns: 2fr 1fr;
   grid-template-rows: auto;
   width: 100%;
-  margin-top: 0px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
 
 @media screen and (max-width: 740px) {
     .nav-links {
@@ -39,6 +41,7 @@ body {
   padding-right: 50px;
 }
 
+
 .topnav a {
   color: #3c3c3c;
   text-align: center;
@@ -48,6 +51,7 @@ body {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: 300;
   margin: 20px;
+  transition: all 0.3s ease;
 }
 
 .nav-links {
@@ -87,7 +91,8 @@ body {
   font-size: 20px;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   font-weight: 300;
-  margin: 0;
+  margin: 20px;
+  margin-right: 40px;
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   border-radius: 5px;
@@ -141,7 +146,10 @@ body {
   width: 100%;
   height: auto;
   object-fit: cover;
+  margin-top: 100px;
   margin-right: 0px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 @media screen and (max-width: 740px) {
@@ -167,16 +175,33 @@ body {
   }
 }
 
-
 .uk-text {
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-weight: 300;
   color: #2d2e33;
-  font-size: 40px, 40px, 20px;
+  line-height: 1.6;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.uk-text h3 {
-  font-size: 10px;
+h1.uk-text {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: rgb(76,113,112);
+  letter-spacing: -0.5px;
+}
+
+h2.uk-text {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-top: 2rem;
+  color: rgb(76,113,112);
+  letter-spacing: -0.3px;
+}
+
+h3.uk-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+  font-weight: 300;
 }
 
 .find-us {
@@ -186,16 +211,23 @@ body {
 
 .find-us button {
   background-color: rgb(76,113,112);
+  padding: 12px 28px;
+  font-size: 18px;
+  font-weight: 400;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   border: none;
   color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  margin: 5px;
   cursor: pointer;
-  border-radius: 50px;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+
+.find-us button:hover {
+  background-color: rgb(66,98,97);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .description {
@@ -262,15 +294,11 @@ body {
 }
 
 footer {
-  background-color: rgb(76,113,112); /* Added footer styles */
+  background-color: rgb(76,113,112);
+  padding: 40px 50px;
+  margin-top: 4rem;
   color: white;
-  text-align: left;
-  padding: 5px;
-  padding-left: 30px;
-  width: auto;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-  font-size: 20px;
-  position: relative;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .email-link {

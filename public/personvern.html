@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Bærum Lungeklinikk er en ledende helsetjenesteleverandør spesialisert innen indre- og lungemedisin i Bærum. Tilbyr avanserte diagnostiske og terapeutiske tjenester.">
+    <title>Bærum lungeklinikk</title>
+
+    <link rel="stylesheet" href="css/personvern.css">
+    <link rel="icon" type="image/png" href="media/logo.png">
+    <script defer src="/__/firebase/10.11.1/firebase-app-compat.js"></script>
+    
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/10.11.1/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/10.11.1/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/10.11.1/firebase-functions-compat.js"></script>
+    <!-- <script defer src="/__/firebase/10.11.1/firebase-messaging-compat.js"></script> -->
+    <script defer src="/__/firebase/10.11.1/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/10.11.1/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/10.11.1/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    <style media="screen">
+    </style>
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="index.html">
+        <img class="logo" src="media/logo.png" alt="Bærumlungeklinikk Logo" >
+      </a>
+      <div class="nav-links">
+          <a href="index.html">Hjem</a>
+          <!-- <a href="#about">Om</a> -->
+          <a href="directions.html">Veibeskrivelse</a>
+          <a href="ourservices.html">Våre tjenester</a>
+          <a class="active" href="contact.html">Kontakt og åpningstider</a>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Meny
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="index.html">Hjem</a>
+          <a href="directions.html">Veibeskrivelse</a>
+          <a href="contact.html">Kontakt og åpningstider</a>
+          <a href="ourservices.html">Våre tjenester</a>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="left">
+        <h1 class="uk-text">Informasjon til deg som pasient/bruker</h1>
+        <!-- Vi arbeider for å ivareta ditt personvern og gir deg bedre konsultasjon og oppfølging. -->
+        <p class="small-text">
+        Hos Bærum Lungeklinikk er vi opptatt av å gi deg den beste behandlingen, samtidig som vi ivaretar ditt personvern på en trygg og profesjonell måte. Vi ønsker å informere deg om hvordan vi arbeider, håndterer person- og helseopplysninger, bruker elektroniske verktøy og samarbeider som et team for å sikre høy kvalitet i vår behandling for deg som pasient. 
+        </p>
+        <h2></h2>
+        <p class="small-text">
+        Når vi samler inn personopplysninger, følger vi helsepersonell-, pasientjournalloven og personvernforordningen (GDPR). Her er en oversikt over hva dette betyr for deg:
+        </p>
+        <h3><b>Hva vi samler inn og hvorfor: </b></h3>
+        <ul class="small-text">
+            <li>Ved ytelse av helsehjelp gjelder en journalføringsplikt etter helsepersonelloven §§ 39 og 40 og pasientjournalforskriften. Vi dokumenterer de opplysninger som er relevante og nødvendige for å yte, administrere og kvalitetssikre helsehjelp, samt å ivareta lovpålagte melde- og opplysningsplikter. Dette medfører at:</li>
+            <ul>
+                <li>Før konsultasjon kan du bli bedt om å fylle ut et spørreskjema med opplysninger om din helsesituasjon. Våre medarbeidere vil på forhånd sikre at opplysningene i våre spørreskjema er riktig forstått og utfylt, og sikre opplysningene i din journal, før legen håndterer disse opplysningene. Medarbeiderne er underlagt taushetsplikt. </li>
+                <li>Legen samler nødvendige opplysninger for å yte deg best mulig trygg og korrekt helsehjelp, inkludert oppdatert oversikt over bla. medisiner og vaksiner fra kjernejournalen eller fra undersøkelser du har tatt som radiologiske undersøkelser, blodprøvesvar eller andre relevante undersøkelser. </li>
+                <li>Opplysningene brukes til diagnostikk, behandling og dokumentasjon i din elektroniske pasientjournal, ferdigstilt av legen. </li>
+            </ul>
+        </ul>
+
+        <h3><b>Hvordan vi håndterer dine opplysninger: </b></h3>
+        <ul class="small-text">
+            <li>Alle opplysninger behandles konfidensielt, i tråd med gjeldende lovverk.  </li>
+            <li>Vi benytter et elektronisk pasientjournalsystem (EPJ) levert av WebMed og eventuelt lydopptak via transkripsjonsverktøy (leverandør kan variere etter behov og spesifiseres etter ønske) for å sikre mest mulig nøyaktig dokumentasjon. </li>
+            <li>Opplysninger som ikke lenger er nødvendige, slettes eller makuleres umiddelbart. </li>
+        </ul>
+        <h3><b>Videreformidling av opplysninger: </b></h3>
+        <ul class="small-text">
+            <li>Helsepersonell har som den klare hovedregel taushetsplikt, jf. helsepersonelloven § 21. Helseopplysninger vil kun deles med tredjeparter dersom du som pasient samtykker eller det ellers er rettslig grunnlag i lov- eller forskrift for utleveringen, eksempelvis hvor lovgivningen pålegger melde- eller opplysningsplikter. For mer informasjon se helsepersonelloven og pasientjournalloven. </li>
+            <li>Vi er forpliktet til å etterleve norske lover og forskrifter som krever at enkelte helseopplysninger etter omstendighetene kan bli delt med offentlige helseregistre og myndigheter. Dette kan inkludere rapportering til systemer som Meldingssystem for smittsomme sykdommer (MSIS), Kreftregisteret eller andre instanser ved meldepliktige forhold. Deling skjer kun i samsvar med gjeldende regelverk og innenfor de rammer loven setter. </li>
+            <li>Opplysninger deles kun med nødvendige tredjeparter (f.eks. sykehus henvisende/fastlege eller leger du blir henvist til) når dette er nødvendig for din utredning eller behandling, i henhold til lovverket. </li>
+            <li>Det er inngått databehandleravtale med EPJ leverandør WebMed og andre samarbeidspartnere for å sikre sikrer trygg håndtering av dine opplysninger. Databehandleravtalene skal ivareta informasjonssikkerheten i alle ledd av behandlingen av personopplysninger. Databehandlere har kun anledning til å behandle personopplysningene de får tilgang til gjennom databehandleravtalene etter instrukser fra Bærum Lungeklinikken AS som dataansvarlig.</li>
+        </ul>
+        <h3><b>Lagringstid for helseopplysninger: </b></h3>
+        <ul class="small-text">
+            <li>Journaler oppbevares så lenge det er nødvendig av hensyn til helsehjelpen, i henhold til pasientjournalloven §25. Dette sikrer kontinuitet i din behandling. </li>
+            <li>Kun din lege har tilgang til dine evt transkripsjoner Alle transkripsjoner og notater slettes automatisk og permanent etter 24 timer. Før dette har legen også mulighet til å slette dem manuelt. </li>
+            <li>Ved avsluttet virksomhet eller avsluttet behandling, håndteres journaler i tråd med pasientjournalforskriften § 17. Det betyr at hvis journalen din ikke skal overføres til nytt helsepersonell eller til en annen helsevirksomhet, så overføres journalen til Norsk helsearkiv.  </li>
+        </ul>
+        <h3><b>Dine rettigheter som pasient: </b></h3>
+        <ul class="small-text">
+            <li><b>Innsyn:</b> Du har rett til innsyn i egne helseopplysninger i samsvar med reglene i pasient- og brukerrettighetsloven kapittel 5. Innsyn og rett til kopi av journal er gratis med mindre du ber om flere kopier. Se pasientjournalforskriften § 11. </li>
+            <li><b>Rettelse og sletting:</b> Du kan be om retting eller sletting av opplysninger hvis vilkårene i helsepersonelloven § 42 til § 44 er oppfylt. </li>
+            <li>Opplysninger som kan rettes, vil for eksempel være åpenbare feil som ukorrekt fødselsdato eller navn, men også feildiagnoser eller mangelfulle opplysninger om en pasients helsetilstand eller behandling. </li>
+            <li>Opplysninger som kan slettes vil for eksempel være opplysninger som er feilaktige eller misvisende og føles belastende eller opplysninger som åpenbart ikke er nødvendige for å gi helsehjelp. </li>
+            <li>Hvis ditt krav om retting eller sletting avslås kan du be om begrunnelse for avslaget, og du kan klage på avslaget til Statsforvalteren.</li>
+            <li>Forespørsler om innsyn, retting og sletting besvares så raskt som mulig og senest innen 30 dager. </li>
+            <li><b>Retten til klage:</b> Du kan ellers klage til Datatilsynet hvis du mener at personvernregelverket er brutt. </li>
+            <li><b>Reservasjon: </b>Vi respekterer ditt ønske om å reservere deg mot vår arbeidsmetode. Du kan også reservere deg mot lydopptak under konsultasjonen. Si ifra til legen dersom du har spørsmål, ønsker eller reservasjoner, helst før konsultasjonen. Men vær oppmerksom på at dette kan påvirke kvaliteten på din behandling hos oss.  </li>
+        </ul>
+        <br>
+        <br>
+        <p class="small-text">
+        Vi takker deg for tilliten og ser frem til å gi deg den best mulige behandlingen. Har du spørsmål eller ønsker mer informasjon, er du alltid velkommen til å ta kontakt med oss. 
+        <br><br>
+        <b>Dataansvarlig  ved Bærum Lungeklinikk er dr. Saeed Vahedi </b> <br>
+        </p>
+        <p class="small-text">
+            telefon: 67 79 99 11 <br>
+            e-post: lungelege@gmail.com <br>
+        </p>
+        <br>
+      </div>
+    </div>
+    <footer>
+      <h3>Kontaktinformasjon</h3>
+      <p>Adresse: Sandvika Storsenter, Servicebygget, 4. etasje, Brodtkorbs gate 7, 1338 Sandvika</p>
+      <p>E-post: lungelege@gmail.com </p>
+      <p>Telefon: 67 79 99 11</p>
+      <p>Org. nr.: 933 379 728</p>
+      <p><span style="display: block; text-align: center;">Vi ser frem til å hjelpe deg med dine helsebehov!</span></p>
+      <!-- <p>© 2024 Medical Consulting AS</p> -->
+    </footer>
+
+    <script>
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "firebase/app";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyCjft6x6eVV6YHogiZhAKiTFEEF1FzrVk0",
+        authDomain: "medicalconsulting-2d9d8.firebaseapp.com",
+        projectId: "medicalconsulting-2d9d8",
+        storageBucket: "medicalconsulting-2d9d8.appspot.com",
+        messagingSenderId: "220822377509",
+        appId: "1:220822377509:web:c2b567715b84b7bd239bcc"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        try {
+          let app = firebase.app();
+          let features = [
+            // 'database', 
+            'firestore',
+            'functions',
+            // 'messaging', 
+            'storage', 
+            // 'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
+</html>

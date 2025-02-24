@@ -52,34 +52,60 @@
   </div>
     <div class="content">
       <div class="left">
-        <h1 class="uk-text">Veibeskrivelse</h1>
-        <h2 class="uk-text">Brodtkorbsgate 7<br>1338 Sandvika <br> Sandvika Storsenter, Servicebygget – 4.etg.</h3>
-        <br>
-        <h2 class="uk-text">Om du kommer hit med bil</h1>
-        <h3 class="uk-text">Kjør til Sandvika Storsenter sitt P-hus i den gamle delen av senteret (Brodtkorbsgate 7). Kjør opp til plan 4 i P-huset (P4), ta til venstre når du kommer inn på P-planet, og parker i nærheten av veggen som er skiltet med «Servicebygget». Gå inn glassdøren til Servicebygget, og deretter inn glassdøren til venstre for heisen.
-            <br>
-            <img class="left" src="media/parkeringinngang.jpg" alt="Inngang fra parkeringsplass">
-            Det er to HC-plasser til venstre for glassdøren, og inngangen er HC-tilpasset. <br> <br>
-            <u>Om parkering på Sandvika Storsenter:</u> <br>
-            Det er billettløs 2 timer gratis parkering mellom kl. 6:15-22:30.  Senteret har kameraparkering som betyr at registreringsnummeret blir automatisk lest ved inn- og utkjøring og du trenger ikke trekke P-billett. Parkeringstiden starter og slutter fra tidspunktet du passerer kameraet som leser registreringsnummeret på vei inn og ut av P-huset. Parkerer du innenfor gratistiden trenger du ikke foreta deg noe. Parkerer du utover gratistiden må du betale for parkeringen.
-            For mer informasjon om parkering på Sandvika Storsenter, se <a href="https://sandvikastorsenter.no/praktisk-informasjon/parkering/">https://sandvikastorsenter.no/praktisk-informasjon/parkering/</a>
+        <h2 class="uk-text">Vennligst velg hvordan du vil komme til oss:</h2>
+        <div class="direction-nav">
+            <button class="direction-button" onclick="scrollToSection('parking')">Fra parkeringsplass</button>
+            <button class="direction-button" onclick="scrollToSection('center')">Fra senteret</button>
+            <button class="direction-button" onclick="scrollToSection('walking')">Til fots</button>
+        </div>
+
+        <div id="parking" class="section">
+            <h2 class="uk-text">Om du kommer fra parkeringsplass</h2>
+            <h3 class="uk-text">
+                Gå inn glassdør på gateplan merket med «Servicebygget» til venstre for varemottaket ved innkjøring til den gamle delen av senteret.
+                <br>
+                <img src="media/parkeringinngang.jpg" alt="Inngang fra parkeringsplass"><br>
+                Det er to HC-plasser til venstre for glassdøren, og inngangen er HC-tilpasset.
+                <br> <br>
+                <u>Om parkering på Sandvika Storsenter:</u> <br>
+                Det er billettløs 2 timer gratis parkering mellom kl. 6:15-22:30.  Senteret har kameraparkering som betyr at registreringsnummeret blir automatisk lest ved inn- og utkjøring og du trenger ikke trekke P-billett. Parkeringstiden starter og slutter fra tidspunktet du passerer kameraet som leser registreringsnummeret på vei inn og ut av P-huset. Parkerer du innenfor gratistiden trenger du ikke foreta deg noe. Parkerer du utover gratistiden må du betale for parkeringen.
+                For mer informasjon om parkering på Sandvika Storsenter, se <a href="https://sandvikastorsenter.no/praktisk-informasjon/parkering/">https://sandvikastorsenter.no/praktisk-informasjon/parkering/</a>
             </h3>
-        <h2 class="uk-text">Om du kommer inne fra senteret (e. kl. 9)</h1>
-        <h3 class="uk-text"> Gå inn glassdørene til høyre for heisene ved Meny (2.etg. i den gamle delen av senteret).
-            <img class="left" src="media/etterkl9.jpg" alt="Inngang etter kl.9">
-            <br>
-            Fortsett innover gangen og du kommer til Servicebygget. Ta heis eller trapp opp til 4.etg.
-        </h3>
-        <h2 class="uk-text">Om du kommer til fots før kl. 9</h1>
-        <h3 class="uk-text">Gå inn glassdør på gateplan merket med «Servicebygget» til venstre for varemottaket ved innkjøring til den gamle delen av senteret.
-        <img class="left" src="media/forkl9.jpg" alt="Inngang før kl.9"> Ta heis eller trapp opp til 4.etg. 
-        </h3>
-        <br>
+        </div>
+
+        <div id="center" class="section">
+            <h2 class="uk-text">Om du kommer inne fra senteret (e. kl. 9)</h2>
+            <h3 class="uk-text">
+                Gå inn glassdørene til høyre for heisene ved Meny (2.etg. i den gamle delen av senteret).
+                <img src="media/etterkl9.jpg" alt="Inngang etter kl.9">
+                <br>
+                Fortsett innover gangen og du kommer til Servicebygget. Ta heis eller trapp opp til 4.etg.
+            </h3>
+        </div>
+
+        <div id="walking" class="section">
+            <h2 class="uk-text">Om du kommer til fots før kl. 9</h2>
+            <h3 class="uk-text">
+                Gå inn glassdør på gateplan merket med «Servicebygget» til venstre for varemottaket ved innkjøring til den gamle delen av senteret.
+                Ta heis eller trapp opp til 4.etg. <br>
+                <img src="media/forkl9.jpg" alt="Inngang før kl.9"> <br>
+            </h3>
+        </div>
+
         <h2 class="uk-text">Vennligst ikke nøl med å ta kontakt på telefon eller mail dersom dere har spørsmål.</h2>
-        <br>
       </div>
       <div class="right">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2001.5419157362112!2d10.517964777700934!3d59.8899540660193!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46411366d5994497%3A0x38de2b09ba03de0b!2sBrodtkorbsgate%207%2C%201338%20Sandvika!5e0!3m2!1sno!2sno!4v1716147749349!5m2!1sno!2sno" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-    </body>
+    </div>
+
+    <script>
+    function scrollToSection(id) {
+        document.getElementById(id).scrollIntoView({ 
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+    </script>
+  </body>
 </html>
