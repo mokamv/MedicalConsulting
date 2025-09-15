@@ -179,6 +179,20 @@ body {
   }
 }
 
+@media screen and (min-width: 740px) and (max-width: 1024px) {
+  .topnav a {
+    padding: 10px 12px; /* Adjust padding for better fit */
+    font-size: 18px; /* Reduce font size slightly */
+  }
+  .nav-links {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent buttons from wrapping */
+  }
+  .topnav {
+    padding-right: 20px; /* Reduce padding for better alignment */
+  }
+}
+
 .uk-text {
   color: #2d2e33;
   line-height: 1.6;
