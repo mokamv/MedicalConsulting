@@ -23,6 +23,9 @@ body {
     .nav-links {
       display: none;
     }
+    .content {
+      padding: 0 0;
+    }
 }
 
 @media screen and not (max-width: 740px) {
