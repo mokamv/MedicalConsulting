@@ -8,6 +8,12 @@ body {
     background-color: #f7f7f7;
     display: flex;
     flex-direction: column;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Add fallback fonts and ensure bold text rendering */
+h1, h2, h3, h4, h5, h6, strong {
+  font-weight: bold;
 }
 
 .topnav {
@@ -110,12 +116,10 @@ body {
     text-align: left;
 }
 
-/* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
     background-color: #ddd;
 }
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
