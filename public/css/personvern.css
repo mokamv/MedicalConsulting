@@ -1,229 +1,41 @@
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-  
-body {
-    background-color: #f7f7f7;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Add fallback fonts and ensure bold text rendering */
-}
-  
+/* Page-specific styles for personvern.html */
+
 .content {
-    display: grid;
-    width: 55%;
-    margin: auto;
-    margin-top: 50px;
-}
-
-
-  
-  
-@media screen and (max-width: 740px) {
-        .nav-links {
-        display: none;
-        }
-}
-  
-@media screen and not (max-width: 740px) {
-    .dropdown {
-        display: none;
-    }
-}
-  
-.topnav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-    overflow: hidden;
-    height: 140px;
-    padding-right: 50px;
-}
-  
-.topnav a {
-    color: #3c3c3c;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 300;
-    margin: 20px;
-}
-  
-.nav-links {
-    margin-left: auto;
-}
-  
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-  
-.topnav a.active {
-    /* background: linear-gradient(to right, rgb(103, 143, 105), #375940); */
-    background-color: rgb(76,113,112);
-    color: white;
-    border-radius: 10px;
-}
-  
-.logo {
-    width: 120px; 
-    height:120px;
-    border-radius: 50%;
-    margin-top: 5px;
-    margin-left: 50px;
-    transform: scale(1);
-    object-fit: cover;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-  
-.dropdown button {
-    width: 100px;
-    color: #3c3c3c;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 20px;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 300;
-    margin: 20px;
-    margin-right: 40px;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    border-radius: 5px;
-    border-color: rgb(208, 208, 208);
-}
-  
-.dropdown-content {
-    display: none;
-    justify-content: right;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-  
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.left {
-    padding: 0px;
-}
-
-.right {
-    margin:0;
-    padding: 0;
-    max-width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.right-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    margin-right: 0px;
-}
-
-@media screen and (max-width: 740px) {
-.content {
-        margin: auto;
-        width: 80%;
-    }
-}
-
-
-.uk-text {
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 300;
-    color: #2d2e33;
-    font-size: 40px, 40px, 20px;
-}
-
-.uk-text h3 {
-    font-size: 10px;
-}
-
-.find-us {
-    top: 30%;
-    left: 70px;
-}
-
-.find-us button {
-    background-color: rgb(76,113,112);
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 5px;
-    cursor: pointer;
-    border-radius: 50px;
-}
-
-.description {
-    margin-top: 10px;
-}
-
-.hidden {
-    display: none;
-}
-
-
-footer {
-    background-color: rgb(76,113,112);
-    color: white;
-    text-align: left;
-    padding: 5px;
-    padding-left: 30px;
-    width: auto;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 20px;
-    position: relative;
-}
-
-h3.small-text {
-    font-size: 25px;
+  display: grid;
+  width: 55%;
+  margin: 50px auto;
+  box-sizing: border-box;
 }
 
 .small-text {
-    font-size: 20px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #2d2e33;
+  font-weight: 300;
 }
 
-h1, h2, h3, h4, h5, h6, strong {
-  font-weight: bold;
+h3.small-text {
+  font-size: 22px;
+}
+
+.uk-text {
+  font-weight: 300;
+  color: #2d2e33;
+}
+
+h1.uk-text {
+  color: rgb(76, 113, 112);
+}
+
+@media screen and (max-width: 740px) {
+  .content {
+    width: 90%;
+    margin: 20px auto;
+  }
 }
 
 @media screen and (min-width: 740px) and (max-width: 1024px) {
-  .topnav a {
-    padding: 10px 12px; /* Adjust padding for better fit */
-    font-size: 18px; /* Reduce font size slightly */
-  }
-  .nav-links {
-    display: flex;
-    flex-wrap: nowrap; /* Prevent buttons from wrapping */
-  }
-  .topnav {
-    padding-right: 20px; /* Reduce padding for better alignment */
+  .content {
+    width: 80%;
   }
 }
