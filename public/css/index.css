@@ -6,14 +6,14 @@
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 20px 60px;
   box-sizing: border-box;
 }
 
 .left {
   grid-column: 1;
   grid-row: 1;
-  padding: 50px;
+  padding: 36px 50px 0;
 }
 
 .right {
@@ -57,6 +57,104 @@ h3.uk-text {
   line-height: 1.8;
   color: #4a4a4a;
   font-weight: 300;
+}
+
+.intro-text {
+  margin-bottom: 1rem;
+}
+
+.info-dropdown {
+  margin: 0.9rem 0;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.info-dropdown summary {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 14px;
+  list-style: none;
+  cursor: pointer;
+  padding: 10px 0 8px;
+  font-weight: 500;
+  color: rgb(76, 113, 112);
+  user-select: none;
+}
+
+.dropdown-title {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: rgb(76, 113, 112);
+  flex: 1;
+  min-width: 0;
+}
+
+.info-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.info-dropdown summary:hover {
+  opacity: 0.88;
+}
+
+.accordion-arrow {
+  flex: 0 0 auto;
+  width: 16px;
+  height: 16px;
+  position: relative;
+  color: rgb(76, 113, 112);
+  transform: rotate(0deg);
+  transition: transform 0.28s ease;
+  margin-left: 0;
+  margin-top: 0;
+  display: inline-block;
+}
+
+.accordion-arrow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 14px;
+  height: 14px;
+  margin: auto;
+  border-right: 2.5px solid currentColor;
+  border-bottom: 2.5px solid currentColor;
+  transform: rotate(-45deg);
+  box-sizing: border-box;
+}
+
+.info-dropdown[open] .accordion-arrow {
+  transform: rotate(45deg);
+}
+
+.info-dropdown-content h3.uk-text {
+  padding: 0 0 18px 32px;
+  margin: 0;
+}
+
+.info-dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-2px);
+  transition: max-height 0.35s ease, opacity 0.22s ease, transform 0.22s ease;
+}
+
+.info-dropdown[open] .info-dropdown-content {
+  max-height: 650px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.info-dropdown summary:focus-visible {
+  outline: 2px solid rgba(76, 113, 112, 0.45);
+  outline-offset: 2px;
 }
 
 .find-us button {
