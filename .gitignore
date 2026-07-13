@@ -1,8 +1,7 @@
 node_modules/
 .DS_Store
 
-# Ignore Firebase configuration files
-firebase.json
+# Ignore local Firebase configuration files
 .firebaserc
 firebase-debug.log
 firestore.rules
