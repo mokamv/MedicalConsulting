@@ -1,0 +1,168 @@
+[debug] [2026-07-13T20:44:31.763Z] ----------------------------------------------------------------------
+[debug] [2026-07-13T20:44:31.765Z] Command:       /Users/monavahedi/.nvm/versions/node/v20.11.1/bin/node /Users/monavahedi/.nvm/versions/node/v18.18.2/bin/firebase emulators:start
+[debug] [2026-07-13T20:44:31.765Z] CLI Version:   15.6.0
+[debug] [2026-07-13T20:44:31.765Z] Platform:      darwin
+[debug] [2026-07-13T20:44:31.766Z] Node Version:  v20.11.1
+[debug] [2026-07-13T20:44:31.766Z] Time:          Mon Jul 13 2026 22:44:31 GMT+0200 (sentraleuropeisk sommertid)
+[debug] [2026-07-13T20:44:31.766Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-07-13T20:44:32.687Z] Object "/functions" in "firebase.json" is missing required property: {"missingProperty":"source"}
+[debug] [2026-07-13T20:44:32.687Z] Object "/functions" in "firebase.json" is missing required property: {"missingProperty":"remoteSource"}
+[debug] [2026-07-13T20:44:32.687Z] Field "/functions" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-07-13T20:44:32.687Z] Field "/functions" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[debug] [2026-07-13T20:44:32.691Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-07-13T20:44:32.691Z] > authorizing via signed-in user (mokamv3@gmail.com)
+[debug] [2026-07-13T20:44:32.883Z] openjdk version "25.0.3" 2026-04-21 LTS
+
+[debug] [2026-07-13T20:44:32.883Z] OpenJDK Runtime Environment Temurin-25.0.3+9 (build 25.0.3+9-LTS)
+OpenJDK 64-Bit Server VM Temurin-25.0.3+9 (build 25.0.3+9-LTS, mixed mode, sharing)
+
+[debug] [2026-07-13T20:44:32.890Z] Parsed Java major version: 25
+[info] i  emulators: Starting emulators: functions, firestore, hosting, storage, extensions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions, firestore, hosting, storage, extensions"}}
+[debug] [2026-07-13T20:44:32.892Z] Checked if tokens are valid: true, expires at: 1783978621068
+[debug] [2026-07-13T20:44:32.892Z] Checked if tokens are valid: true, expires at: 1783978621068
+[debug] [2026-07-13T20:44:32.892Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/medicalconsulting-2d9d8 [none]
+[debug] [2026-07-13T20:44:33.880Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/medicalconsulting-2d9d8 200
+[debug] [2026-07-13T20:44:33.880Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/medicalconsulting-2d9d8 {"projectNumber":"220822377509","projectId":"medicalconsulting-2d9d8","lifecycleState":"ACTIVE","name":"MedicalConsulting","labels":{"firebase":"enabled"},"createTime":"2024-03-19T12:10:41.550324Z"}
+[debug] [2026-07-13T20:44:34.597Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-07-13T20:44:34.597Z] [firestore] Firestore Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-07-13T20:44:34.597Z] [firestore.websocket] websocket server for firestore only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-07-13T20:44:34.597Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-07-13T20:44:34.597Z] [storage] Storage Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-07-13T20:44:34.597Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5002}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2026-07-13T20:44:34.601Z] Write emulator hub locator at /var/folders/2f/zx4_wq8d7y59d67xmgj7wv640000gn/T/hub-medicalconsulting-2d9d8.json
+[debug] [2026-07-13T20:44:34.604Z] [Extensions] Started Extensions emulator, this is a noop.
+[debug] [2026-07-13T20:44:34.904Z] [functions] Functions Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-07-13T20:44:34.904Z] [eventarc] Eventarc Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-07-13T20:44:34.904Z] [tasks] Cloud Tasks Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2026-07-13T20:44:34.904Z] late-assigned ports for functions and eventarc emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"ui":[{"address":"127.0.0.1","family":"IPv4","port":4000},{"address":"::1","family":"IPv6","port":4000}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"firestore":[{"address":"127.0.0.1","family":"IPv4","port":8080}],"firestore.websocket":[{"address":"127.0.0.1","family":"IPv4","port":9150}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5002}],"storage":[{"address":"127.0.0.1","family":"IPv4","port":9199}],"functions":[{"address":"127.0.0.1","family":"IPv4","port":5001}],"eventarc":[{"address":"127.0.0.1","family":"IPv4","port":9299}],"tasks":[{"address":"127.0.0.1","family":"IPv4","port":9499}]},"metadata":{"message":"late-assigned ports for functions and eventarc emulators"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: apphosting, auth, database, pubsub, dataconnect {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mapphosting, auth, database, pubsub, dataconnect\u001b[22m"}}
+[debug] [2026-07-13T20:44:34.914Z] defaultcredentials: writing to file /Users/monavahedi/.config/firebase/mokamv3_gmail_com_application_default_credentials.json
+[debug] [2026-07-13T20:44:34.916Z] Setting GAC to /Users/monavahedi/.config/firebase/mokamv3_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/monavahedi/.config/firebase/mokamv3_gmail_com_application_default_credentials.json"}}
+[debug] [2026-07-13T20:44:34.916Z] Checked if tokens are valid: true, expires at: 1783978621068
+[debug] [2026-07-13T20:44:34.916Z] Checked if tokens are valid: true, expires at: 1783978621068
+[debug] [2026-07-13T20:44:34.916Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/medicalconsulting-2d9d8/adminSdkConfig [none]
+[debug] [2026-07-13T20:44:36.209Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/medicalconsulting-2d9d8/adminSdkConfig 200
+[debug] [2026-07-13T20:44:36.209Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/medicalconsulting-2d9d8/adminSdkConfig {"projectId":"medicalconsulting-2d9d8","storageBucket":"medicalconsulting-2d9d8.appspot.com","locationId":"europe-west3"}
+[debug] [2026-07-13T20:44:36.238Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2026-07-13T20:44:36.238Z] Ignoring unsupported arg: single_project_mode_error {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: single_project_mode_error"}}
+[debug] [2026-07-13T20:44:36.238Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/Users/monavahedi/.cache/firebase/emulators/cloud-firestore-emulator-v1.20.2.jar","--host","127.0.0.1","--port",8080,"--websocket_port",9150,"--project_id","medicalconsulting-2d9d8","--rules","/Users/monavahedi/Desktop/MedicalConsultingAS/firestore.rules","--single_project_mode",true,"--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","websocket_port","functions_emulator","seed_from_export","project_id","single_project_mode"],"joinArgs":false,"shell":false,"port":8080} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/Users/monavahedi/.cache/firebase/emulators/cloud-firestore-emulator-v1.20.2.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--websocket_port\",9150,\"--project_id\",\"medicalconsulting-2d9d8\",\"--rules\",\"/Users/monavahedi/Desktop/MedicalConsultingAS/firestore.rules\",\"--single_project_mode\",true,\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"websocket_port\",\"functions_emulator\",\"seed_from_export\",\"project_id\",\"single_project_mode\"],\"joinArgs\":false,\"shell\":false,\"port\":8080}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[debug] [2026-07-13T20:44:36.538Z] WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::allocateMemory has been called by io.netty.util.internal.PlatformDependent0$2 (file:/Users/monavahedi/.cache/firebase/emulators/cloud-firestore-emulator-v1.20.2.jar)
+WARNING: Please consider reporting this to the maintainers of class io.netty.util.internal.PlatformDependent0$2
+WARNING: sun.misc.Unsafe::allocateMemory will be removed in a future release
+ {"metadata":{"emulator":{"name":"firestore"},"message":"WARNING: A terminally deprecated method in sun.misc.Unsafe has been called\nWARNING: sun.misc.Unsafe::allocateMemory has been called by io.netty.util.internal.PlatformDependent0$2 (file:/Users/monavahedi/.cache/firebase/emulators/cloud-firestore-emulator-v1.20.2.jar)\nWARNING: Please consider reporting this to the maintainers of class io.netty.util.internal.PlatformDependent0$2\nWARNING: sun.misc.Unsafe::allocateMemory will be removed in a future release\n"}}
+[debug] [2026-07-13T20:44:37.105Z] Jul 13, 2026 10:44:37 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+INFO: Started WebSocket server on ws://127.0.0.1:9150
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 13, 2026 10:44:37 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://127.0.0.1:9150\n"}}
+[debug] [2026-07-13T20:44:37.121Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
+[debug] [2026-07-13T20:44:37.121Z] 127.0.0.1:8080
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
+
+If you are running a Firestore in Datastore Mode project, run:
+
+   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080
+
+Note: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.
+Dev App Server is now running.
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"127.0.0.1:8080\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nIf you are running a Firestore in Datastore Mode project, run:\n\n   export DATASTORE_EMULATOR_HOST=127.0.0.1:8080\n\nNote: Support for Datastore Mode is in preview. If you encounter any bugs please file at https://github.com/firebase/firebase-tools/issues.\nDev App Server is now running.\n\n"}}
+[info] ✔  firestore: Firestore Emulator UI websocket is running on 9150. {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator UI websocket is running on 9150."}}
+[debug] [2026-07-13T20:44:37.259Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
+[warn] ⚠  Unexpected rules runtime error: WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::arrayBaseOffset has been called by com.google.protobuf.UnsafeUtil$MemoryAccessor (file:/Users/monavahedi/.cache/firebase/emulators/cloud-storage-rules-runtime-v1.1.3.jar)
+WARNING: Please consider reporting this to the maintainers of class com.google.protobuf.UnsafeUtil$MemoryAccessor
+WARNING: sun.misc.Unsafe::arrayBaseOffset will be removed in a future release
+ {"metadata":{"emulator":{"name":"storage"},"message":"Unexpected rules runtime error: WARNING: A terminally deprecated method in sun.misc.Unsafe has been called\nWARNING: sun.misc.Unsafe::arrayBaseOffset has been called by com.google.protobuf.UnsafeUtil$MemoryAccessor (file:/Users/monavahedi/.cache/firebase/emulators/cloud-storage-rules-runtime-v1.1.3.jar)\nWARNING: Please consider reporting this to the maintainers of class com.google.protobuf.UnsafeUtil$MemoryAccessor\nWARNING: sun.misc.Unsafe::arrayBaseOffset will be removed in a future release\n"}}
+[debug] [2026-07-13T20:44:37.782Z] Temp file directory for storage emulator: /var/folders/2f/zx4_wq8d7y59d67xmgj7wv640000gn/T/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: /var/folders/2f/zx4_wq8d7y59d67xmgj7wv640000gn/T/firebase/storage/blobs"}}
+[debug] [2026-07-13T20:44:37.785Z] Checked if tokens are valid: true, expires at: 1783978621068
+[debug] [2026-07-13T20:44:37.785Z] Checked if tokens are valid: true, expires at: 1783978621068
+[debug] [2026-07-13T20:44:37.785Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/medicalconsulting-2d9d8/sites 
+[debug] [2026-07-13T20:44:40.141Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/medicalconsulting-2d9d8/sites 200
+[debug] [2026-07-13T20:44:40.142Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/medicalconsulting-2d9d8/sites {"sites":[{"name":"projects/medicalconsulting-2d9d8/sites/medicalconsulting-2d9d8","defaultUrl":"https://medicalconsulting-2d9d8.web.app","appId":"1:220822377509:web:c2b567715b84b7bd239bcc","type":"DEFAULT_SITE"}]}
+[debug] [2026-07-13T20:44:40.142Z] Checked if tokens are valid: true, expires at: 1783978621068
+[debug] [2026-07-13T20:44:40.142Z] Checked if tokens are valid: true, expires at: 1783978621068
+[debug] [2026-07-13T20:44:40.142Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/medicalconsulting-2d9d8/webApps/1:220822377509:web:c2b567715b84b7bd239bcc/config [none]
+[debug] [2026-07-13T20:44:41.463Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/medicalconsulting-2d9d8/webApps/1:220822377509:web:c2b567715b84b7bd239bcc/config 200
+[debug] [2026-07-13T20:44:41.463Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/medicalconsulting-2d9d8/webApps/1:220822377509:web:c2b567715b84b7bd239bcc/config {"projectId":"medicalconsulting-2d9d8","appId":"1:220822377509:web:c2b567715b84b7bd239bcc","storageBucket":"medicalconsulting-2d9d8.appspot.com","locationId":"europe-west3","apiKey":"AIzaSyCjft6x6eVV6YHogiZhAKiTFEEF1FzrVk0","authDomain":"medicalconsulting-2d9d8.firebaseapp.com","messagingSenderId":"220822377509","projectNumber":"220822377509","version":"2"}
+[debug] [2026-07-13T20:44:41.470Z] Checked if tokens are valid: true, expires at: 1783978621068
+[debug] [2026-07-13T20:44:41.470Z] Checked if tokens are valid: true, expires at: 1783978621068
+[debug] [2026-07-13T20:44:41.470Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/medicalconsulting-2d9d8 [none]
+[debug] [2026-07-13T20:44:42.095Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/medicalconsulting-2d9d8 200
+[debug] [2026-07-13T20:44:42.096Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/medicalconsulting-2d9d8 {"projectId":"medicalconsulting-2d9d8","projectNumber":"220822377509","displayName":"MedicalConsulting","name":"projects/medicalconsulting-2d9d8","resources":{"hostingSite":"medicalconsulting-2d9d8","locationId":"europe-west3"},"state":"ACTIVE","labels":{"firebase":"enabled"},"etag":"1_47b80b46-0e5e-4bf1-ac3d-898a4cca13dc"}
+[info] i  hosting[medicalconsulting-2d9d8]: Serving hosting files from: public {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpublic\u001b[22m"}}
+[info] ✔  hosting[medicalconsulting-2d9d8]: Local server: http://127.0.0.1:5002 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5002\u001b[22m\u001b[24m"}}
+[debug] [2026-07-13T20:44:42.155Z] [Extensions] Connecting Extensions emulator, this is a noop.
+[info] i  functions: Watching "/Users/monavahedi/Desktop/MedicalConsultingAS/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/monavahedi/Desktop/MedicalConsultingAS/functions\" for Cloud Functions..."}}
+[debug] [2026-07-13T20:44:42.158Z] Validating nodejs source
+[warn] ⚠  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] ⚠  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2026-07-13T20:44:42.886Z] > [functions] package.json contents: {
+  "name": "functions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "build": "echo 'No build step defined'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "eslint-config-google": "^0.14.0",
+    "firebase-admin": "^12.1.0",
+    "firebase-functions": "^5.0.1",
+    "svelte": "^4.2.19",
+    "svelte-loader": "^3.1.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.22.0",
+    "eslint": "^8.57.1",
+    "globals": "^16.0.0"
+  },
+  "engines": {
+    "node": "22"
+  }
+}
+[debug] [2026-07-13T20:44:42.886Z] Building nodejs source
+[debug] [2026-07-13T20:44:42.886Z] Failed to find version of module node: reached end of search path /Users/monavahedi/Desktop/MedicalConsultingAS/functions/node_modules
+[warn] ⚠  functions: Your requested "node" version "22" doesn't match your global version "20". Using node@20 from host. 
+[debug] [2026-07-13T20:44:42.888Z] Could not find functions.yaml. Must use http discovery
+[debug] [2026-07-13T20:44:42.893Z] Found firebase-functions binary at '/Users/monavahedi/Desktop/MedicalConsultingAS/functions/node_modules/.bin/firebase-functions'
+[debug] [2026-07-13T20:44:53.008Z] Failed to call quitquitquit. This often means the server failed to start request to http://localhost:8593/__/quitquitquit failed, reason:  {"message":"request to http://localhost:8593/__/quitquitquit failed, reason: ","type":"system","errno":"ECONNREFUSED","code":"ECONNREFUSED"}
+[error] ⬢  functions: Failed to load function definition from source: FirebaseError: User code failed to load. Cannot determine backend specification. Timeout after 10000. See https://firebase.google.com/docs/functions/tips#avoid_deployment_timeouts_during_initialization' {"metadata":{"emulator":{"name":"functions"},"message":"Failed to load function definition from source: FirebaseError: User code failed to load. Cannot determine backend specification. Timeout after 10000. See https://firebase.google.com/docs/functions/tips#avoid_deployment_timeouts_during_initialization'"}}
+[debug] [2026-07-13T20:45:03.033Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://127.0.0.1:4000/               │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────┬────────────────┬──────────────────────────────────┐
+│ Emulator   │ Host:Port      │ View in Emulator UI              │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Functions  │ 127.0.0.1:5001 │ http://127.0.0.1:4000/functions  │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Firestore  │ 127.0.0.1:8080 │ http://127.0.0.1:4000/firestore  │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Hosting    │ 127.0.0.1:5002 │ n/a                              │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Storage    │ 127.0.0.1:9199 │ http://127.0.0.1:4000/storage    │
+├────────────┼────────────────┼──────────────────────────────────┤
+│ Extensions │ 127.0.0.1:5001 │ http://127.0.0.1:4000/extensions │
+└────────────┴────────────────┴──────────────────────────────────┘
+  Emulator Hub host: 127.0.0.1 port: 4400
+  Other reserved ports: 4500, 9150
+┌─────────────────────────┬───────────────┬─────────────────────┐
+│ Extension Instance Name │ Extension Ref │ View in Emulator UI │
+└─────────────────────────┴───────────────┴─────────────────────┘
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2026-07-13T20:45:18.714Z] Jul 13, 2026 10:45:18 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jul 13, 2026 10:45:18 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
