@@ -19,14 +19,14 @@
 }
 
 .uk-text {
-  font-weight: 300;
-  color: #2d2e33;
+  font-weight: 400;
+  color: var(--text);
   line-height: 1.6;
   margin-bottom: 1rem;
 }
 
 h1.uk-text {
-  color: rgb(76, 113, 112);
+  color: var(--primary);
 }
 
 iframe {
@@ -43,4 +43,24 @@ iframe {
     padding: 1rem;
     margin: 1rem auto;
   }
+}
+
+@media screen and (max-width: 740px) {
+  .left, .right {
+    padding: 1.25rem;
+  }
+
+  h1.uk-text { font-size: 1.6rem; line-height: 1.2; }
+  h2.uk-text { font-size: 1.2rem; line-height: 1.4; }
+  h3.uk-text { font-size: 1.05rem; line-height: 1.7; }
+
+  iframe {
+    height: 300px;
+  }
+}
+
+a.tel {
+  color: var(--primary);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
 }

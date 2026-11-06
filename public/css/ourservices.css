@@ -26,18 +26,18 @@
 }
 
 .uk-text {
-  font-weight: 300;
-  color: #2d2e33;
+  font-weight: 400;
+  color: var(--text);
 }
 
 h1.uk-text {
   font-size: 1.8rem;
-  color: rgb(76, 113, 112);
+  color: var(--primary);
 }
 
 a.uk-text {
-  font-weight: 300;
-  color: #2d2e33;
+  font-weight: 400;
+  color: var(--text);
   font-size: 2em;
   margin-top: 0.67em;
   margin-bottom: 10px;
@@ -47,16 +47,17 @@ a.uk-text {
 
 h3.uk-text {
   line-height: 1.8;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .services a.button {
-  font-weight: 300;
-  color: #2d2e33;
-  width: 90%;
+  font-weight: 400;
+  color: var(--text);
+  width: 100%;
   border: none;
   background-color: transparent;
   padding: 1rem;
+  min-height: 48px;
   text-align: left;
   text-decoration: none;
   display: block;
@@ -73,7 +74,7 @@ h3.uk-text {
 }
 
 .find-us a.button {
-  background-color: rgb(76, 113, 112);
+  background-color: var(--primary);
   border: none;
   color: white;
   padding: 15px 32px;
@@ -88,7 +89,7 @@ h3.uk-text {
 }
 
 .find-us a.button:hover {
-  background-color: rgb(60, 95, 94);
+  background-color: var(--primary-dark);
 }
 
 @media screen and (max-width: 740px) {
@@ -96,5 +97,23 @@ h3.uk-text {
     grid-template-columns: 1fr;
     padding: 1rem;
     margin: 1rem auto;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .left, .right {
+    padding: 1.25rem;
+  }
+
+  h1.uk-text { font-size: 1.6rem; line-height: 1.2; }
+  h2.uk-text { font-size: 1.2rem; line-height: 1.4; }
+  h3.uk-text { font-size: 1.05rem; line-height: 1.7; }
+
+}
+
+@media screen and (max-width: 740px) {
+  .find-us a.button {
+    display: block;
+    margin: 8px 0;
   }
 }

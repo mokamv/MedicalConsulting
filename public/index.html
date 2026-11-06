@@ -1,32 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="no">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Bærum Lungeklinikk er en ledende helsetjenesteleverandør spesialisert innen indre- og lungemedisin i Bærum. Tilbyr avanserte diagnostiske og terapeutiske tjenester.">
+    <meta name="theme-color" content="#4c7170">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="nb_NO">
+    <meta property="og:site_name" content="Bærum Lungeklinikk">
+    <meta property="og:title" content="Bærum Lungeklinikk">
+    <meta property="og:description" content="Bærum Lungeklinikk er en ledende helsetjenesteleverandør spesialisert innen indre- og lungemedisin i Bærum. Tilbyr avanserte diagnostiske og terapeutiske tjenester.">
+    <meta property="og:image" content="https://medicalconsulting-2d9d8.web.app/media/logo.png">
+    <meta property="og:image:width" content="256">
+    <meta property="og:image:height" content="251">
+    <meta name="twitter:card" content="summary">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Bærum Lungeklinikk",
+  "image": "https://medicalconsulting-2d9d8.web.app/media/logo.png",
+  "telephone": "+47 67 79 99 11",
+  "email": "lungelege@gmail.com",
+  "medicalSpecialty": "Pulmonary",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Brodtkorbs gate 7, Thon Senter Sandvika, Servicebygget, 4. etasje",
+    "postalCode": "1338",
+    "addressLocality": "Sandvika",
+    "addressCountry": "NO"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "16:00"
+    }
+  ]
+}
+    </script>
     <title>Bærum Lungeklinikk</title>
 
     <link rel="stylesheet" href="/css/shared.css">
     <link rel="stylesheet" href="/css/index.css">
-    <link rel="icon" type="image/png" href="media/logo.png">
-    <script defer src="/__/firebase/10.11.1/firebase-app-compat.js"></script>
+    <link rel="icon" type="image/png" href="/media/logo.png">
     
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/10.11.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/10.11.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/10.11.1/firebase-functions-compat.js"></script>
-    <!-- <script defer src="/__/firebase/10.11.1/firebase-messaging-compat.js"></script> -->
-    <script defer src="/__/firebase/10.11.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/10.11.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/10.11.1/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-    </style>
   </head>
   <body>
     <script src="/js/components.js"></script>
@@ -74,12 +99,12 @@
           Dersom du har spørsmål om våre tjenester eller ønsker å bestille tid, er du velkommen til å kontakte oss. Vennligst merk at henvisning er nødvendig.
         </h3>
         <div class="find-us">
-          <a href="contact.html"><button>Kontakt oss</button></a>
-          <a href="directions.html"><button>Veibeskrivelse</button></a>
+          <a class="btn" href="contact.html">Kontakt oss</a>
+          <a class="btn" href="directions.html">Veibeskrivelse</a>
         </div>
       </div>
       <div class="right">
-        <img class="right-img" src="media/lungelege-saeed-vahedi.webp" alt="Lungelege Saeed Vahedi">
+        <img class="right-img" width="900" height="1125" loading="lazy" src="/media/lungelege-saeed-vahedi.webp" alt="Lungelege Saeed Vahedi">
       </div>
     </div>
     <footer></footer>

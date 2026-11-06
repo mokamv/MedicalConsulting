@@ -17,19 +17,23 @@
 }
 
 .uk-text {
-  font-weight: 300;
+  font-weight: 400;
   color: #2d2e33;
   line-height: 1.8;
 }
 
 h1.uk-text {
   font-size: 1.8rem;
-  color: rgb(76, 113, 112);
+  color: var(--primary);
 }
 
 @media screen and (max-width: 740px) {
   .content {
     padding: 1rem;
     margin: 1rem auto;
+  }
+
+  .left {
+    padding: 1.25rem;
   }
 }

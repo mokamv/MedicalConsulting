@@ -3,18 +3,45 @@
    Alle sider laster denne filen. Sidespesifikk CSS er i egne filer.
    ============================================================ */
 
-html, body {
+:root {
+  --primary: rgb(76, 113, 112);
+  --primary-dark: rgb(60, 95, 94);
+  --primary-tint: rgba(76, 113, 112, 0.1);
+  --text: #2d2e33;
+  --text-body: #3a3b40;
+  --bg: #f7f7f7;
+  --card: #ffffff;
+  --radius: 10px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.1);
+  --header-h: 140px;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-padding-top: 90px;
 }
 
 body {
-  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+  overflow-x: clip;
+  background-color: var(--bg);
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: var(--text);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6, strong {
@@ -26,16 +53,50 @@ img {
   height: auto;
 }
 
+a {
+  overflow-wrap: anywhere;
+}
+
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 3px solid rgba(76, 113, 112, 0.55);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
+
 /* ---- TOPNAV ---- */
 
 .topnav {
+  position: sticky;
+  top: 0;
+  z-index: 200;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
-  height: 140px;
+  height: var(--header-h);
   padding-right: 50px;
-  box-sizing: border-box;
+  flex-shrink: 0;
+  transition: box-shadow 0.25s ease, height 0.25s ease;
+}
+
+.topnav.scrolled {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 .topnav a {
@@ -46,12 +107,20 @@ img {
   font-size: 20px;
   font-weight: 300;
   margin: 20px;
-  transition: all 0.3s ease;
+  transition: background-color 0.25s ease, color 0.25s ease;
   border-radius: 5px;
+}
+
+.topnav a.logo-link {
+  padding: 0;
+  margin: 0;
+  background: none;
 }
 
 .nav-links {
   margin-left: auto;
+  display: flex;
+  align-items: center;
 }
 
 .topnav a:hover {
@@ -59,8 +128,12 @@ img {
   color: black;
 }
 
+.topnav a.logo-link:hover {
+  background: none;
+}
+
 .topnav a.active {
-  background-color: rgb(76, 113, 112);
+  background-color: var(--primary);
   color: white;
   border-radius: 10px;
 }
@@ -68,6 +141,7 @@ img {
 /* ---- LOGO ---- */
 
 .logo {
+  display: block;
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -75,66 +149,137 @@ img {
   object-fit: cover;
 }
 
-/* ---- DROPDOWN (mobilmeny) ---- */
+/* ---- MOBILMENY ---- */
 
 .dropdown {
   position: relative;
+  display: none;
 }
 
 .dropdown button {
-  width: 100px;
-  text-align: center;
-  padding: 14px 16px;
-  font-size: 20px;
-  font-weight: 200;
-  margin: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 10px 16px;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0 16px 0 0;
   background-color: #ffffff;
-  color: #000000;
-  border-radius: 5px;
+  color: #2d2e33;
+  border-radius: 8px;
   border: 1px solid rgb(208, 208, 208);
   cursor: pointer;
   letter-spacing: 0.5px;
+  -webkit-tap-highlight-color: transparent;
 }
+
+.burger,
+.burger::before,
+.burger::after {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: currentColor;
+  border-radius: 2px;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.burger {
+  position: relative;
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+.burger::before { top: -6px; }
+.burger::after  { top: 6px; }
+
+.dropdown.open .burger {
+  background-color: transparent;
+}
+
+.dropdown.open .burger::before { transform: translateY(6px) rotate(45deg); }
+.dropdown.open .burger::after  { transform: translateY(-6px) rotate(-45deg); }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  right: 0;
-  background-color: #f9f9f9;
-  min-width: 210px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 100;
-  border-radius: 5px;
+  right: 12px;
+  top: calc(100% + 6px);
+  background-color: #ffffff;
+  min-width: 250px;
+  box-shadow: var(--shadow-md);
+  z-index: 300;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
+.dropdown.open .dropdown-content {
   display: block;
+}
+
+.topnav .dropdown-content a {
+  display: block;
+  margin: 0;
+  padding: 15px 20px;
+  min-height: 48px;
+  font-size: 18px;
+  color: #2d2e33;
   text-align: left;
+  text-decoration: none;
+  border-radius: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-.dropdown-content a:hover {
-  background-color: #ddd;
+.topnav .dropdown-content a:last-child {
+  border-bottom: none;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+.topnav .dropdown-content a:hover {
+  background-color: #eee;
+}
+
+.topnav .dropdown-content a.active {
+  background-color: var(--primary);
+  color: white;
 }
 
 /* ---- FOOTER ---- */
 
 footer {
-  background-color: rgb(76, 113, 112);
+  background-color: var(--primary);
   padding: 40px 50px;
   margin-top: auto;
   color: white;
+  line-height: 1.5;
+}
+
+footer .footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 footer h3 {
   font-weight: bold;
   margin-top: 0;
+}
+
+footer p {
+  margin: 0.6em 0;
+}
+
+footer .footer-note {
+  text-align: center;
+  margin-top: 1.6em;
+  padding-top: 1.2em;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .email-link {
@@ -146,11 +291,44 @@ footer h3 {
   text-decoration: underline;
 }
 
+/* ---- KNAPPER ---- */
+
+.btn {
+  display: inline-block;
+  background-color: var(--primary);
+  color: white;
+  padding: 12px 28px;
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
 /* ---- RESPONSIVE ---- */
 
 @media screen and (max-width: 740px) {
+  :root {
+    --header-h: 76px;
+  }
+
   .nav-links {
     display: none;
+  }
+
+  .dropdown {
+    display: block;
   }
 
   .topnav {
@@ -158,21 +336,31 @@ footer h3 {
   }
 
   .logo {
-    margin-left: 15px;
+    width: 56px;
+    height: 56px;
+    margin: 10px 0 10px 16px;
+  }
+
+  footer {
+    padding: 28px 20px;
   }
 }
 
-/* Gyldig syntaks — erstatter den ødelagte "not"-varianten i gamle CSS-filer */
-@media screen and (min-width: 741px) {
-  .dropdown {
-    display: none;
+@media screen and (min-width: 741px) and (max-width: 1024px) {
+  :root {
+    --header-h: 110px;
   }
-}
 
-@media screen and (min-width: 740px) and (max-width: 1024px) {
   .topnav a {
     padding: 10px 12px;
     font-size: 18px;
+    margin: 12px 8px;
+  }
+
+  .logo {
+    width: 90px;
+    height: 90px;
+    margin-left: 30px;
   }
 
   .topnav {

@@ -3,6 +3,7 @@
 .content {
   display: grid;
   width: 55%;
+  max-width: 900px;
   margin: 50px auto;
   box-sizing: border-box;
 }
@@ -10,8 +11,8 @@
 .small-text {
   font-size: 18px;
   line-height: 1.7;
-  color: #2d2e33;
-  font-weight: 300;
+  color: var(--text);
+  font-weight: 400;
 }
 
 h3.small-text {
@@ -19,15 +20,18 @@ h3.small-text {
 }
 
 .uk-text {
-  font-weight: 300;
-  color: #2d2e33;
+  font-weight: 400;
+  color: var(--text);
 }
 
 h1.uk-text {
-  color: rgb(76, 113, 112);
+  color: var(--primary);
 }
 
 @media screen and (max-width: 740px) {
+  .small-text { font-size: 16px; }
+  h3.small-text { font-size: 18px; }
+
   .content {
     width: 90%;
     margin: 20px auto;

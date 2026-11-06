@@ -27,14 +27,14 @@
 }
 
 .uk-text {
-  font-weight: 300;
-  color: #2d2e33;
+  font-weight: 400;
+  color: var(--text);
   line-height: 1.6;
   margin-bottom: 1rem;
 }
 
 h2.uk-text {
-  color: rgb(76, 113, 112);
+  color: var(--primary);
 }
 
 iframe {
@@ -53,7 +53,10 @@ iframe {
 }
 
 .direction-button {
-  background-color: rgb(76, 113, 112);
+  min-height: 44px;
+  font-family: inherit;
+  -webkit-tap-highlight-color: transparent;
+  background-color: var(--primary);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -64,7 +67,7 @@ iframe {
 }
 
 .direction-button:hover {
-  background-color: rgb(60, 95, 94);
+  background-color: var(--primary-dark);
 }
 
 @media screen and (max-width: 740px) {
@@ -72,5 +75,29 @@ iframe {
     grid-template-columns: 1fr;
     padding: 1rem;
     margin: 1rem auto;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .left, .right {
+    padding: 1.25rem;
+  }
+
+  h1.uk-text { font-size: 1.6rem; line-height: 1.2; }
+  h2.uk-text { font-size: 1.2rem; line-height: 1.4; }
+  h3.uk-text { font-size: 1.05rem; line-height: 1.7; }
+
+  iframe {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .direction-button {
+    flex: 1 1 100%;
+  }
+
+  .direction-nav {
+    margin-bottom: 1.25rem;
   }
 }
