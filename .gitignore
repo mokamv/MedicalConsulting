@@ -8,3 +8,6 @@ firestore.rules
 firestore.indexes.json
 storage.rules
 ```
+# Logger og lokal Firebase-cache
+*.log
+.firebase/
