@@ -66,11 +66,38 @@ iframe {
   transition: background-color 0.2s ease;
 }
 
+.address-card {
+  background-color: #f3f7f7;
+  border-left: 4px solid var(--primary);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.mobile-only { display: none; }
+
+.address-text {
+  margin: 0 0 0.75rem;
+  line-height: 1.6;
+  color: var(--text);
+}
+
+.map-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
 .direction-button:hover {
   background-color: var(--primary-dark);
 }
 
 @media screen and (max-width: 740px) {
+  .mobile-only { display: block; }
+  .desktop-only { display: none; }
+
   .content {
     grid-template-columns: 1fr;
     padding: 1rem;
