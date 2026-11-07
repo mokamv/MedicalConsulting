@@ -23,7 +23,7 @@
 
   const navHTML =
     '<header class="topnav">' +
-      '<a class="logo-link" href="/index.html"><img class="logo" src="/media/logo.png" width="120" height="118" alt="Bærum Lungeklinikk Logo"></a>' +
+      '<a class="logo-link" href="/index.html"><img class="logo" src="/media/logo.png" width="76" height="75" alt="Bærum Lungeklinikk Logo"></a>' +
       '<nav class="nav-links" aria-label="Hovedmeny">' +
         items.map(i => menuLink(i[0], i[1], i[2])).join('') +
       '</nav>' +
@@ -63,6 +63,13 @@
     document.addEventListener('click', (e) => { if (!dd.contains(e.target)) setOpen(false); });
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { setOpen(false); btn.focus(); } });
     window.addEventListener('resize', () => { if (window.innerWidth > 740) setOpen(false); });
+
+    document.querySelectorAll('.services a.button').forEach((a) => {
+      if (new URL(a.href, location.href).pathname === path) {
+        a.classList.add('active');
+        a.setAttribute('aria-current', 'page');
+      }
+    });
 
     const topnav = document.querySelector('.topnav');
     const onScroll = () => topnav.classList.toggle('scrolled', window.scrollY > 4);

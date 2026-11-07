@@ -35,14 +35,43 @@ h1.uk-text {
   color: var(--primary);
 }
 
-a.uk-text {
-  font-weight: 400;
-  color: var(--text);
-  font-size: 2em;
-  margin-top: 0.67em;
-  margin-bottom: 10px;
-  display: inline-block;
+a.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   text-decoration: none;
+}
+
+a.back-link::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.left > h1.uk-text,
+.left > a.back-link {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 3rem;
+  margin: 0 0 0.25rem;
+  padding-left: 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--primary);
+}
+
+a.back-link:hover {
+  text-decoration: underline;
+}
+
+a.back-link:hover::before {
+  transform: translateX(-3px) rotate(45deg);
 }
 
 h3.uk-text {
@@ -71,6 +100,13 @@ h3.uk-text {
 .services a.button:hover {
   background-color: rgba(76, 113, 112, 0.1);
   padding-left: 1.5rem;
+}
+
+.services a.button.active {
+  background-color: var(--primary-tint);
+  color: var(--primary-dark);
+  font-weight: 500;
+  border-bottom-color: var(--primary);
 }
 
 .find-us a.button {
@@ -112,8 +148,58 @@ h3.uk-text {
 }
 
 @media screen and (max-width: 740px) {
+  .left > h1.uk-text,
+  .left > a.back-link {
+    padding-left: 0.25rem;
+    height: 2.75rem;
+    font-size: 1.15rem;
+  }
+
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .services a.button {
+    width: auto;
+    margin: 0;
+    padding: 0.6rem 1rem;
+    min-height: 44px;
+    font-size: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 999px;
+  }
+
+  .services a.button:hover {
+    padding-left: 1rem;
+  }
+
+  .services a.button.active {
+    background-color: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+  }
+
   .find-us a.button {
     display: block;
     margin: 8px 0;
   }
+}
+
+/* Ensartet innrykk på punktlister */
+.right ul {
+  margin: 0.75rem 0;
+  padding-left: 1.5rem;
+  list-style: disc;
+}
+
+.right ul ul {
+  margin: 0.25rem 0;
+  list-style: circle;
+}
+
+.right li {
+  line-height: 1.7;
+  margin: 0.3rem 0;
 }
