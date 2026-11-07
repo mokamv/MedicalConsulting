@@ -73,6 +73,13 @@ summary:focus-visible {
   }
 }
 
+/* Hide footer before scrolling */
+.content {
+  min-height: calc(100vh - var(--header-h));
+  min-height: calc(100dvh - var(--header-h));
+  align-content: start;
+}
+
 /* ---- TOPNAV ---- */
 
 .topnav {
